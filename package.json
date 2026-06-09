@@ -1,0 +1,95 @@
+{
+  "name": "browser-image-squash",
+  "version": "1.1.0",
+  "description": "Client-side image compression & resizing in the browser — responsive AVIF + JPEG/PNG variants, off the main thread via a Web Worker pool, EXIF stripped. WASM codecs (jSquash), framework-agnostic, React optional.",
+  "private": false,
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "keywords": [
+    "image",
+    "image-compression",
+    "image-optimization",
+    "compress",
+    "compression",
+    "optimize",
+    "browser",
+    "client-side",
+    "avif",
+    "webp",
+    "jpeg",
+    "png",
+    "mozjpeg",
+    "oxipng",
+    "resize",
+    "responsive",
+    "srcset",
+    "picture",
+    "web-worker",
+    "wasm",
+    "exif",
+    "squash",
+    "jsquash",
+    "react",
+    "typescript"
+  ],
+  "homepage": "https://github.com/Dawidw5219/browser-image-squash",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dawidw5219/browser-image-squash.git"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "source": "./src/index.ts",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "npm run typecheck && npm run test && tsdown && vite build example --base /browser-image-squash/",
+    "test": "vitest run",
+    "demo": "vite example",
+    "deploy": "npm run build && ghdeploy --npm --pages example/dist"
+  },
+  "dependencies": {
+    "@jsquash/avif": "^2.1.1",
+    "@jsquash/jpeg": "^1.6.0",
+    "@jsquash/oxipng": "^2.3.0",
+    "@jsquash/png": "^3.1.1",
+    "@jsquash/resize": "^2.1.1"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": { "optional": true }
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "jsdom": "^26.0.0",
+    "publint": "^0.3.18",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tsdown": "^0.21.7",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.5",
+    "vitest": "^4.1.2"
+  }
+}
