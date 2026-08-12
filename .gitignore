@@ -1,0 +1,9 @@
+node_modules/
+.claude/
+.vscode/
+tests/
+vitest.config.ts
+dist/
+*.md
+!README.md
+*.tsbuildinfo
