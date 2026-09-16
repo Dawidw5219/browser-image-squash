@@ -1,0 +1,15 @@
+/cache/
+/state/
+/runtime/
+/worktrees/
+/merge/
+/tasks/*/proof/
+/tasks/*/proofs/
+/tasks/
+/project.db-wal
+/project.db-shm
+/project.db-journal
+/project.db.lock
+/sessions.db
+/sessions.db-wal
+/sessions.db-shm

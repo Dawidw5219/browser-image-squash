@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "state": "ready",
+  "taskStore": ".sophia/tasks",
+  "createdAt": "2026-08-12T13:59:27.925Z",
+  "migration": {
+    "source": ".claude/specs",
+    "sourceFingerprint": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "taskCount": 0,
+    "completedAt": "2026-08-12T13:59:27.925Z"
+  }
+}
